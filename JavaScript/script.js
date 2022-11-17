@@ -15,7 +15,9 @@ function getTopSellersContainer() {
 document.addEventListener("DOMContentLoaded", async x => {
   const topSellersContainer = getTopSellersContainer();
   const games = await getGames();
-  for (const game of games) {
+  let numberOfTopGames = 5;
+  for (let i = 0; i < numberOfTopGames; i++) {
+    const game = games[i];
     const cardHTML =
       `<div class="card" style="width: 18rem">
         <img
@@ -28,7 +30,10 @@ document.addEventListener("DOMContentLoaded", async x => {
           <p class="card-text">
             ${game.description}
           </p>
-          <a href="#" class="btn btn-primary" onClick=handleTopSellerClick(event,${game.price})>Add to Cart</a>
+          <div>
+          <button class="btn btn-primary" onClick=handleTopSellerClick(event,${game.price})>Add to Cart</button>
+          <span class="price" >$${game.price}</span>
+          </div>
         </div>
       </div>`
     topSellersContainer.insertAdjacentHTML("afterbegin", cardHTML);
@@ -52,7 +57,7 @@ function handleCloseButtonClick() {
 
 function handleTopSellerClick(event, price) {
   //get parent element of event target and fetch the title
-  var title = event.target.parentElement.querySelector(".card-title").innerHTML;
+  var title = event.target.parentElement.parentElement.querySelector(".card-title").innerHTML;
   //add the item to the state
   state.items.push({ title: title, price: price });
   state.total += price;

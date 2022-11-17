@@ -302,8 +302,10 @@
 }
 
 .topSellerContainer{
-    background-color: #966F33;
+    background-color:black;
+        min-height: 100vh;
 }
+
 .header{
     display: flex;
     border-bottom: 1px solid black;
@@ -340,14 +342,27 @@
 
 .card{
     margin-top: 20px;
+    height: 30rem !important;
+    
 }
+.card-body{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    
+
+}
+
+img{
+    height: 170px;
+}
+
 .price{
     font-size: 14px;
     color: #fff;
     background-color: burlywood;
     padding: 10px;
     border-radius: 5px;
-    margin: 10px;
     float:right;
 }
 
