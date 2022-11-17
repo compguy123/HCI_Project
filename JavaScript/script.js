@@ -10,12 +10,12 @@ async function getGames(){
     return games;    
 }
 
-function getGamesContainer(){
-    return document.querySelector(".gamesContainer");
+function getTopSellersContainer(){
+    return document.querySelector(".topSellersContainer");
 }
 
 document.addEventListener("DOMContentLoaded",async x =>{
-    const gamesContainer = getGamesContainer();
+    const topSellersContainer = getTopSellersContainer();
     const games = await getGames();
     for(const game of games){
         const cardHTML =
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded",async x =>{
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>`
-      gamesContainer.insertAdjacentHTML("afterbegin",cardHTML);
+      topSellersContainer.insertAdjacentHTML("afterbegin",cardHTML);
     }
     
 })
