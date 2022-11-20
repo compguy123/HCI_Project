@@ -1,5 +1,5 @@
 
-
+let currentPrice= 0;
 
 async function getGames() {
   const jsonPath = "../JavaScript/data.json";
@@ -12,8 +12,63 @@ function getTopSellersContainer() {
   return document.querySelector(".topSellersContainer");
 }
 
+function getTopSellersButton() {
+  return document.querySelector("#topSellersButton");
+}
+
+function getTopSellerGames() {
+  return document.querySelector("#topSellerGames")
+}
+
+async function displayFilteredTopSellerGames(filterByCost) {
+  const gamesElement = getTopSellerGames();
+  const games = await getGames();
+  let numberOfTopGames = 10;
+  gamesElement.innerHTML ="";
+  for (let i = 0; i < numberOfTopGames; i++) {
+    const game = games[i];
+    if (game.price !== filterByCost)
+      continue;
+    const cardHTML =
+      `<div class="card" style="width: 18rem">
+        <img
+          class="card-img-top"
+          src="${game.url}"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">${game.gameTitle}</h5>
+          <p class="card-text">
+            ${game.description}
+          </p>
+          <div>
+          <button class="btn btn-primary" onClick=handleTopSellerClick(event,${game.price})>Add to Cart</button>
+          <span class="price" >$${game.price}</span>
+          </div>
+        </div>
+      </div>`
+      gamesElement.insertAdjacentHTML("afterbegin", cardHTML);
+  }
+
+}
+
+
+
 document.addEventListener("DOMContentLoaded", async x => {
-  const topSellersContainer = getTopSellersContainer();
+  const listOfButtons = getTopSellersButton();
+  console.log(listOfButtons);
+  for (const child of listOfButtons.children) {
+    child.addEventListener("click", x => {
+      const cost = x.target.textContent;
+      //remove dollor sign 
+      displayFilteredTopSellerGames(+cost.substring(1));
+    });
+
+  }
+
+})
+/*
+const topSellersContainer = getTopSellersContainer();
   const games = await getGames();
   let numberOfTopGames = 5;
   for (let i = 0; i < numberOfTopGames; i++) {
@@ -38,9 +93,7 @@ document.addEventListener("DOMContentLoaded", async x => {
       </div>`
     topSellersContainer.insertAdjacentHTML("afterbegin", cardHTML);
   }
-
-})
-
+*/
 
 var state = {
   items: [],
