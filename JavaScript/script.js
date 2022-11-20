@@ -1,5 +1,5 @@
 
-let currentPrice= 0;
+let lastClickedButton = 0;
 
 async function getGames() {
   const jsonPath = "../JavaScript/data.json";
@@ -24,7 +24,7 @@ async function displayFilteredTopSellerGames(filterByCost) {
   const gamesElement = getTopSellerGames();
   const games = await getGames();
   let numberOfTopGames = 10;
-  gamesElement.innerHTML ="";
+  gamesElement.innerHTML = "";
   for (let i = 0; i < numberOfTopGames; i++) {
     const game = games[i];
     if (game.price !== filterByCost)
@@ -47,7 +47,7 @@ async function displayFilteredTopSellerGames(filterByCost) {
           </div>
         </div>
       </div>`
-      gamesElement.insertAdjacentHTML("afterbegin", cardHTML);
+    gamesElement.insertAdjacentHTML("afterbegin", cardHTML);
   }
 
 }
@@ -56,16 +56,20 @@ async function displayFilteredTopSellerGames(filterByCost) {
 
 document.addEventListener("DOMContentLoaded", async x => {
   const listOfButtons = getTopSellersButton();
-  console.log(listOfButtons);
   for (const child of listOfButtons.children) {
     child.addEventListener("click", x => {
-      const cost = x.target.textContent;
+      const cost = +x.target.textContent.substring(1);
+      const btn = x.target;
+      btn.classList.replace("btn-primary", "btn-info");
+      if (lastClickedButton)
+        lastClickedButton.classList.replace("btn-info", "btn-primary");
+      lastClickedButton = btn;
       //remove dollor sign 
-      displayFilteredTopSellerGames(+cost.substring(1));
+      displayFilteredTopSellerGames(cost);
     });
 
   }
-
+  listOfButtons.children[0].click();
 })
 /*
 const topSellersContainer = getTopSellersContainer();
