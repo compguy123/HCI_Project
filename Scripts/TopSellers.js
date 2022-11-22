@@ -68,5 +68,5 @@ document.addEventListener("DOMContentLoaded", async (x) => {
 
 window.onload =  function () {
   var breadCrumbEl = document.querySelector(".history");
-  setBreadCrumb("pages/TopSellers.html","file:///Users/dipeshasd/Desktop/HCI_Project-dipeshWork/",breadCrumbEl);
+  setBreadCrumb("pages/TopSellers.html","file:///Users/dipeshasd/Desktop/HCI_Project/",breadCrumbEl);
 }

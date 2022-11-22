@@ -10,6 +10,9 @@
 .topSellerContainer {
   min-height: 100vh;
   padding: 3rem;
+  background:url(../Assets/top.png);
+  background-size: cover;
+  background-position: center;
 }
 
 .card-actions {
