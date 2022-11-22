@@ -1,0 +1,35 @@
+.topSellersContainer,
+#topSellerGames,
+#topSellersButton {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.topSellerContainer {
+  min-height: 100vh;
+  padding: 3rem;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.breadCrumbLinks{
+
+  margin-left: 20px;
+
+  color: orange;
+  text-decoration: none;
+  background-color: transparent;
+
+}
+
+.breadCrumbLinks:hover{
+  text-decoration: none;
+  background-color: brown;
+  color: white;
+}

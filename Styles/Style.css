@@ -1,0 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.card-text {
+  overflow: scroll;
+  max-height: 18vh;
+  min-height: 18vh;
+}
+
+.topSellerLink {
+  text-decoration: none;
+}
+
+.price {
+  font-size: 14px;
+  color: #fff;
+  background-color: burlywood;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  float: right;
+}
+
+.checkoutButton {
+  background-color: #f0c14b;
+  border: 1px solid;
+  color: #111;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 700;
+  height: 2.5rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.closeButton {
+  /* make it to top right of cart-items with some right margin*/
+  position: absolute;
+  right: 0.25rem;
+  top: 0rem;
+  cursor: pointer;
+  padding: 1px;
+  color: orange;
+}
+
+.cartTotal {
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  /* center */
+  text-align: center;
+}
+
+.cartItemRemove {
+  cursor: pointer;
+  color: red;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-left: 0.5rem;
+}
+
+.cart-items {
+  position: absolute;
+  top: 7%;
+  right: 0;
+  width: 20%;
+  height: 42%;
+  background-color: #fff;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  border-radius: 0 0 0 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  overflow: scroll;
+}
+
+.cartItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 0;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  height: 20%;
+  margin-top: 20px;
+}
+
+.homePageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: green;
+  align-content: center;
+  background: url("https://raw.githubusercontent.com/compguy123/HCI_Project/dipesh/DALL%C2%B7E%202022-11-19%2021.49.25%20-%20video%20game%20store%20background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-direction: column;
+}
+.homePageItemsContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  /* children should have space */
+  flex-wrap: wrap;
+}
+
+.homeCardItem {
+  width: 20vw;
+  height: 50vh;
+}
+
+.homeCardItem:hover {
+  scale: 1.1;
+  transition: 0.5s;
+}
+
+.categoriesBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq-RGezQyAZkgG9SDAv9ryQCFEusqhgtRm9Q&usqp=CAU");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+}
+
+.categories {
+  display: flex;
+  /* flex:1; */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #fff;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxlkSIIM2TemqdFXdPnyUeN2Qwrr6Ct-l2mw&usqp=CAU");
+  font-size: 1rem;
+  font-weight: 700;
+  /* font robot */
+  font-family: "Roboto", sans-serif;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.onSale {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHilBRqUz9FXLs__HMyKxXO5gSajdHVZpxPw&usqp=CAU");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+.featured {
+  background-color: rgba(255, 228, 228, 0.5);
+  color: BLACK;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background image should be game */
+  background-image: url("https://pyxis.nymag.com/v1/imgs/32e/0a0/ad5a5b9dc0de51e819d77a1137c0c10b7c-uncharted-legacy-of-thieves.2x.rhorizontal.w700.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-size: 1.5rem;
+  font-weight: 700;
+  /* font robot */
+  font-family: "Roboto", sans-serif;
+}
+
+.topSeller {
+  background-color: rgba(255, 228, 228, 0.5);
+  color: BLACK;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background image should be game */
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8uNn82ZedpiVSpu0jeidATqRb729NsWQ8-Im36jZiL1VlwvwPbfcaRqNzvWbIxRdNBFM&usqp=CAU");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-size: 1.5rem;
+  font-weight: 700;
+  /* font robot */
+  font-family: "Roboto", sans-serif;
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+  /* separate each row using a line*/
+  color: rgb(239, 230, 230);
+}
+/* when rows are hovered increase the row siz*/
+.row:hover {
+  transform: scale(1.5);
+  transition: 0.5s;
+  width: 100%;
+  /* center text */
+  text-align: center;
+  cursor: pointer;
+}
+
+#topSellerText {
+  font-size: 2rem;
+  color: black;
+  background: rgb(223, 165, 58);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#topSellerText:hover {
+  background: rgb(61, 60, 60);
+  /* change pointer */
+  cursor: pointer;
+  color: orange;
+}
+
+.topSellerContainer {
+  /* background-color: #966F33; */
+  background: url("https://raw.githubusercontent.com/compguy123/HCI_Project/dipesh/top.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+.onSaleContainer {
+  background: url("https://pyxis.nymag.com/v1/imgs/11c/b41/3e3df22514f4a12282c3dc70fd9e590087-the-quarry.2x.rhorizontal.w700.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  /* background-color: #966F33; */
+}
+
+.headerText {
+  font-size: 4rem;
+  font-weight: 600;
+  text-align: center;
+  flex: 14;
+  margin-left: 85px;
+  color: white;
+  font: "Roboto", sans-serif;
+}
+.gamesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.onSalePrice {
+  background-color: red;
+}
+
+.headerIcon {
+  flex: 1;
+}
+
+.card {
+  margin-top: 20px;
+}
+
+.card-body {
+  max-height: 20rem;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
