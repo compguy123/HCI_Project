@@ -55,6 +55,7 @@
   /* center */
   text-align: center;
 }
+
 .cartItemRemove {
   cursor: pointer;
   color: red;
@@ -240,7 +241,7 @@
 
 .topSellerContainer {
   /* background-color: #966F33; */
-  background: url(../top.png);
+  background: url("https://raw.githubusercontent.com/compguy123/HCI_Project/dipesh/top.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -273,8 +274,6 @@
   font: "Roboto", sans-serif;
 }
 .gamesContainer {
-  /* background-color: black; */
-  margin: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -290,7 +289,6 @@
 
 .card {
   margin-top: 20px;
-  max-height: 30rem;
 }
 
 .card-body {

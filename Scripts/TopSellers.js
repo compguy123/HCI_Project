@@ -1,4 +1,3 @@
-
 let lastClickedButton = 0;
 
 async function getGames() {
@@ -17,7 +16,7 @@ function getTopSellersButton() {
 }
 
 function getTopSellerGames() {
-  return document.querySelector("#topSellerGames")
+  return document.querySelector("#topSellerGames");
 }
 
 async function displayFilteredTopSellerGames(filterByCost) {
@@ -27,10 +26,8 @@ async function displayFilteredTopSellerGames(filterByCost) {
   gamesElement.innerHTML = "";
   for (let i = 0; i < numberOfTopGames; i++) {
     const game = games[i];
-    if (game.price !== filterByCost)
-      continue;
-    const cardHTML =
-      `<div class="card" style="width: 18rem">
+    if (game.price !== filterByCost) continue;
+    const cardHTML = `<div class="card" style="width: 18rem">
         <img
           class="card-img-top"
           src="${game.url}"
@@ -41,33 +38,29 @@ async function displayFilteredTopSellerGames(filterByCost) {
           <p class="card-text">
             ${game.description}
           </p>
-          <div>
-          <button class="btn btn-primary" onClick=handleTopSellerClick(event,${game.price})>Add to Cart</button>
-          <span class="price" >$${game.price}</span>
+          <div class="card-actions">
+            <button class="btn btn-primary" onClick=handleTopSellerClick(event,${game.price})>Add to Cart</button>
+            <span class="price">$${game.price}</span>
           </div>
         </div>
-      </div>`
+      </div>`;
     gamesElement.insertAdjacentHTML("afterbegin", cardHTML);
   }
-
 }
 
-
-
-document.addEventListener("DOMContentLoaded", async x => {
+document.addEventListener("DOMContentLoaded", async (x) => {
   const listOfButtons = getTopSellersButton();
   for (const child of listOfButtons.children) {
-    child.addEventListener("click", x => {
+    child.addEventListener("click", (x) => {
       const cost = +x.target.textContent.substring(1);
       const btn = x.target;
       btn.classList.replace("btn-primary", "btn-info");
       if (lastClickedButton)
         lastClickedButton.classList.replace("btn-info", "btn-primary");
       lastClickedButton = btn;
-      //remove dollor sign 
+      //remove dollor sign
       displayFilteredTopSellerGames(cost);
     });
-
   }
   listOfButtons.children[0].click();
-})
+});

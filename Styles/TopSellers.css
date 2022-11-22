@@ -1,66 +1,19 @@
-
-
-.topSellerContainer{
-    background-color:black;
-        min-height: 100vh;
+.topSellersContainer,
+#topSellerGames,
+#topSellersButton {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.header{
-    display: flex;
-    border-bottom: 1px solid black;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: #966F33;
- 
+.topSellerContainer {
+  min-height: 100vh;
+  padding: 3rem;
 }
 
-
-.headerText{
-    font-size: 2rem;
-    font-weight: 600;
-    text-align: center;
-    flex: 14;
-    margin-left: 85px;
-    color: white;
-    
-}
-
-.headerIcon{
-    flex: 1;
-}
-
-.topSellersContainer, #topSellerGames, #topSellersButton{
-    background-color: black;
-    margin: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-
-    
-}
-.card{
-    margin-top: 20px;
-    height: 30rem !important;
-    
-}
-.card-body{
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    
-
-}
-img{
-    height: 170px;
-}
- 
-.price{
-    font-size: 14px;
-    color: #fff;
-    background-color: burlywood;
-    padding: 10px;
-    border-radius: 5px;
-    float:right;
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
