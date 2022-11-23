@@ -68,5 +68,5 @@ document.addEventListener("DOMContentLoaded", async (x) => {
 
 window.onload =  function () {
   var breadCrumbEl = document.querySelector(".history");
-  setBreadCrumb("pages/TopSellers.html","../../",breadCrumbEl);
+  setBreadCrumb("Pages/TopSellers.html","../../",breadCrumbEl);
 }
