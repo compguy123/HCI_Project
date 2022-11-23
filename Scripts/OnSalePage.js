@@ -20,7 +20,8 @@
     }
 
     function resize() {
-        width = Math.max(window.innerWidth * .25, 275),
+        // width = Math.max(window.innerWidth * .25, 275),
+        width = 310;
             height = window.innerHeight * .5,
             totalWidth = width * items.length;
 
@@ -101,17 +102,17 @@
         const games =  await getOnSale();
         for(let i =0;i<games.length;i++){
             const game = games[i];
-            const card =`<div class="carousel__slider__item">
+            const card =`<div class="carousel__slider__item" style="width: 18rem;  max-height: 250px;">
             <div class="item__3d-frame">
                 <div class="item__3d-frame__box item__3d-frame__box--front">
-                    <div class="card" style="width: 18rem">
+                    <div class="card">
                         <img class="card-img-top" width = "50" src="${game.url}" alt="Card image cap" />
                         <div class="card-body">
                             <h5 class="card-title">${game.gameTitle}</h5>
                             <p class="card-text">
                                 ${game.description}
                             </p>
-                            <div>
+                            <div class="card-actions">
                                 <button class="btn btn-primary" onClick=handleTopSellerClick(event,${game.price})>Add to
                                     Cart</button>
                                 <span class="price">$${game.price}</span>
@@ -119,8 +120,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="item__3d-frame__box item__3d-frame__box--left"></div>
-                <div class="item__3d-frame__box item__3d-frame__box--right"> </div>
+                
             </div>
         </div>`
     carousel.insertAdjacentHTML("afterbegin", card);
@@ -137,6 +137,7 @@
 
 
   window.onload =  function () {
+    
     var breadCrumbEl = document.querySelector(".history");
-    setBreadCrumb("pages/OnSalePage.html","../../",breadCrumbEl);
+    setBreadCrumb("Pages/OnSalePage.html","../../",breadCrumbEl);
   }
