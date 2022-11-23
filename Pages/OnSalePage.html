@@ -2,9 +2,12 @@
 <html lang="en">
 
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
     <!-- <script type="text/javascript" src="../Scripts/Script.js"></script> -->
 
-    <!-- <link rel="stylesheet" type="text/css" href="../Styles/Style.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../Styles/Style.css" />
     <link rel="stylesheet" type="text/css" href="../Styles/OnSale.css" />
     <link rel="stylesheet" type="text/css" href="https://pro.fontawesome.com/releases/v5.9.0/css/all.css" />
     <meta charset="UTF-8">
@@ -14,23 +17,49 @@
 </head>
 
 <body>
-    
-    <div class="history" style="font-size:10px">
-      
+
+
+    <div class="history" style="font-size:10px;position: relative;top:3rem;display: inline;">
+        ...
     </div>
-    <hr>
-    <p>3D Carousel/Slider!</p>
+
+    <div class="header">
+
+        <div class="headerText">
+            <h1>ON-SALE</h1>
+        </div>
+
+        <div class="headerIcon">
+            <span class="topSellerCartIcon" onClick="handleCartClick()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-cart4"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                </svg>
+                <span id="cart-count">0</span>
+            </span>
+            <!-- show current cart items -->
+            <div class="cart-items" id="cart">a</div>
+        </div>
+    </div>
     <div class="carousel">
         <div class="carousel__body">
-            <div class="carousel__prev"><i class="far fa-angle-left"></i></div>
-            <div class="carousel__next"><i class="far fa-angle-right"></i></div>
+
             <div class="carousel__slider">
 
             </div>
         </div>
+        <div class="carousel_control">
+            <div class="carousel__prev"><i class="far fa-angle-left"></i></div>
+            <div class="carousel__next"><i class="far fa-angle-right"></i></div>
+        </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
     <script src="../Scripts/Script.js"></script>
     <script type="text/javascript" src="../Scripts/OnSalePage.js"></script>
+
 </body>
 
 </html>
