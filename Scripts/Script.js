@@ -4,7 +4,10 @@ var state = {
   isCartClicked: false,
   
 };
-
+if(localStorage.getItem("cart")){
+  state = JSON.parse(localStorage.getItem("cart"))
+  updateCart();
+}
 
 
 var indexClicked = -1;
@@ -12,6 +15,7 @@ var indexClicked = -1;
 function handleCloseButtonClick() {
   this.hideCart();
 }
+
 
 function handleTopSellerClick(event, price) {
   //get parent element of event target and fetch the title
@@ -24,6 +28,7 @@ function handleTopSellerClick(event, price) {
   state.total += price;
   //update the cart
   updateCart();
+  localStorage.setItem("cart",JSON.stringify(state));
   this.hideCart();
 }
 
