@@ -36,6 +36,8 @@
   width: 100%;
 }
 
+
+
 .closeButton {
   /* make it to top right of cart-items with some right margin*/
   position: absolute;
@@ -297,4 +299,11 @@
 
 ::-webkit-scrollbar {
   width: 5px;
+}
+.card-title{
+
+  margin-bottom: var(--bs-card-title-spacer-y);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
