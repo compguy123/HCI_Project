@@ -106,6 +106,7 @@
             <div class="item__3d-frame">
                 <div class="item__3d-frame__box item__3d-frame__box--front">
                     <div class="card">
+                        <span class="stamp">$1</span>
                         <img class="card-img-top" width = "50" src="${game.url}" alt="Card image cap" />
                         <div class="card-body">
                             <h5 class="card-title">${game.gameTitle}</h5>

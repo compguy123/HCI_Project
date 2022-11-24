@@ -166,3 +166,23 @@ html > .carousel, body > .carousel {
   justify-content: space-between;
   align-items: center;
 }
+.stamp{
+    color: red;
+    background-color: yellow;
+    position:   absolute;
+    top: 1px;
+    border-radius: 100%;
+    font-size:3rem;
+    width: 30%;
+    margin: 1rem;
+}
+.price::before {
+    content: '';
+    left: 190px;
+    right: 10px;
+    position: absolute;
+    border-bottom: 4px solid red;
+    transform: skewY(-8deg);
+    box-shadow: 0 0 2px black;
+    bottom: 10%;
+}
