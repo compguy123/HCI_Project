@@ -12,9 +12,9 @@ var width, height, totalWidth, margin = 20,
 
 function init() {
     resize();
-    move(Math.floor(items.length / 2));
+    move(Math.floor(items.length / 2)+1);
     bindEvents();
-
+    console.log(items);
     timer();
 }
 
@@ -38,7 +38,7 @@ function move(index) {
     if (index < 1) index = items.length;
     if (index > items.length) index = 1;
     currIndex = index;
-
+    
     for (var i = 0; i < items.length; i++) {
         let item = items[i],
             box = item.getElementsByClassName('item__3d-frame')[0];
@@ -117,11 +117,12 @@ async function displayFilteredTopSellerGames(filterByCost) {
     let games = await getGames();
     const query = getQuery();
     games = games.filter(x => x.gameTitle.toUpperCase().includes(query?.toUpperCase()));
-    if (games.length === 0) {
+    if(!query)
+    return;
+    if (games.length ===0) {
         gamesElement.innerHTML = `<span> OOPS! Nothing found. Here are other games you might be interesed in:</span>
        
     `
-
     function generateCard(game){
         return ` <div class="carousel__slider__item" style="width: 18rem;  max-height: 250px;">
         <div class="item__3d-frame">
@@ -154,7 +155,7 @@ async function displayFilteredTopSellerGames(filterByCost) {
     games= games.slice(0,5);
     const htmlCards = games.map(x => generateCard(x));
     s.innerHTML= htmlCards.join("\n");
-        return
+        return;
     }
     gamesElement.innerHTML = "";
     for (let i = 0; i < games.length; i++) {
