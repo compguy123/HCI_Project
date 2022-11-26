@@ -4,6 +4,19 @@ var state = {
   isCartClicked: false,
   
 };
+
+function removeItem(index) {
+  //remove the item from the state
+  state.total -= state.items[index].price;
+  state.items.splice(index, 1);
+  //update the cart
+  localStorage.setItem("cart",JSON.stringify(state));
+  updateCart();
+  handleCartClick();
+  handleCartClick();
+}
+
+
 if(localStorage.getItem("cart")){
   state = JSON.parse(localStorage.getItem("cart"))
   updateCart();
@@ -53,13 +66,12 @@ function handleCartClick() {
   var cart = document.querySelector("#cart");
   cart.innerHTML = "";
   state.items.forEach(function (item, index) {
-    indexClicked = index;
     cart.innerHTML +=
       '<div class="cartItem">' +
       item.title +
       " - " +
       item.price +
-      " <span class=\"cartItemRemove\" onClick='removeItem(indexClicked)'> X </span></div>";
+      ` <span class=\"cartItemRemove\" onClick=removeItem(${index})> X </span></div>`;
   });
   cart.innerHTML += '<div class="cartTotal">Total$: ' + state.total + "</div>";
   // a checkout button which is centered on the right
@@ -69,15 +81,7 @@ function handleCartClick() {
     '<button class="closeButton" onClick="hideCart()">X</button>';
 }
 
-function removeItem(index) {
-  //remove the item from the state
-  state.total -= state.items[index].price;
-  state.items.splice(index, 1);
-  //update the cart
-  updateCart();
-  handleCartClick();
-  handleCartClick();
-}
+
 
 function showCart() {
   var cart = document.querySelector(".cart-items");
@@ -98,14 +102,8 @@ var setBreadCrumb = function (pagelink,path,breadCrumbEl) {
 
   console.log(pagelink);
   console.log(breadCrumbEl);
- 
-  history.forEach((item,index)=>{
-    breadCrumbEl.innerHTML += `<a href="${path}${item}" class="breadCrumbLinks">
 
-    ${item.split(".")[0].split("/")[1]?item.split(".")[0].split("/")[1]:"Home"}
-    
-    </a> &nbsp; &nbsp;`
- 
-  })
+  breadCrumbEl.innerHTML =`<a href="../Index.html" class="breadCrumbLinks">Home</a>`;
+
 
 }

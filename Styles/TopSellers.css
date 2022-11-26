@@ -22,9 +22,10 @@
 }
 
 .breadCrumbLinks{
-
+  position: relative;
   margin-left: 20px;
-
+  padding:0.5rem;
+  font-size: 18px;
   color: orange;
   text-decoration: none;
   background-color: transparent;
