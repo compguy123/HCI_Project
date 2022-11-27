@@ -1,168 +1,104 @@
-
-.topSellerLink{
-    text-decoration: none;
-}
-.homePageContainer{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: green;
-    align-content: center;
-    background:url(../Assets/DALL·E\ 2022-11-19\ 21.49.25\ -\ video\ game\ store\ background.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-   flex-direction: column;
-}
-.homePageItemsContainer{
-    
+.homePageContainer {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
     align-items: center;
-    width: 100vw;
-    /* children should have space */
-    flex-wrap: wrap;
-
-}
-
-.homeCardItem{
-    width: 20vw;
-    height:50vh;
-}
-
-.homeCardItem:hover{
-   scale:1.1;
-    transition: 0.5s;
-}
-
-.categoriesBox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq-RGezQyAZkgG9SDAv9ryQCFEusqhgtRm9Q&usqp=CAU");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgb(0 0 0 / 50%);
-
-}
-
-.categories{
-    display: flex;
-    /* flex:1; */
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    background-color: #fff;
-    background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxlkSIIM2TemqdFXdPnyUeN2Qwrr6Ct-l2mw&usqp=CAU");
-    font-size: 1rem;
-    font-weight: 700;
-    /* font robot */
-    font-family: 'Roboto', sans-serif;
-    border-radius: 10px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-}
-.categories a{
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: white;
-
-}
-
-.onSale{
-
-    background-color: rgba(0,0,0,0.5);
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHilBRqUz9FXLs__HMyKxXO5gSajdHVZpxPw&usqp=CAU");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgb(0 0 0 / 50%);
-    font-size: 1.5rem;
-    font-weight: 700;
-    font-family: 'Roboto', sans-serif;
+  }
 
-}
-.featured{
-
-    background-color: rgba(255, 228, 228, 0.5);
-    color: BLACK;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background image should be game */
-    background-image: url("https://pyxis.nymag.com/v1/imgs/32e/0a0/ad5a5b9dc0de51e819d77a1137c0c10b7c-uncharted-legacy-of-thieves.2x.rhorizontal.w700.jpg");
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  
-    font-size: 1.5rem;
-    font-weight: 700;
-    /* font robot */
-    font-family: 'Roboto', sans-serif;
-}
-
-.topSeller{
-    background-color: rgba(255, 228, 228, 0.5);
-    color: BLACK;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background image should be game */
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8uNn82ZedpiVSpu0jeidATqRb729NsWQ8-Im36jZiL1VlwvwPbfcaRqNzvWbIxRdNBFM&usqp=CAU");
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  
-    font-size: 1.1rem;
-    font-weight: 700;
-    /* font robot */
-    font-family: 'Roboto', sans-serif;
-}
-
-
-.row{
-    margin-right: -15px;
-    margin-left: -15px;
-    /* separate each row using a line*/
-    color: rgb(239, 230, 230);
-   
-}
-/* when rows are hovered increase the row siz*/
-.row:hover{
-    transform: scale(1.5);
-    transition: 0.5s;
+  .homeCardItem {
     width: 100%;
-    /* center text */
-    text-align: center;
-    cursor: pointer;
-}
+    height: 100vh;
+
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .homeCardItem svg {
+    transform: scale(150%);
+  }
+
+  .topSeller {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .onSale {
+    background-color: rgba(255, 0, 0, 0.8);
+  }
+
+  .featured {
+    background-color: rgba(255, 0, 0, 0.8);
+  }
+
+  .topSeller a {
+    transform: scale(150%);
+    transition: all 150ms ease-in;
+    color: red;
+    text-decoration: none
+  }
+
+  .categories {
+    background-color: rgba(255, 0, 0, 0.8);
+  }
+
+  .categories a {
+    transform: scale(150%);
+    transition: all 150ms ease-in;
+    color: red;
+    text-decoration: none
+  }
+
+  .categories a:hover {
+    transform: scale(200%);
+    -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .7));
+    filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .7));
+    color: red;
+  }
 
 
-#topSellerText{
-    font-size: 2rem;
-    color: black;
-    background: rgb(223, 165, 58);
-    padding: 10px;
-    border-radius: 5px;
-    
-}
+  .topSeller a:hover {
+    transform: scale(200%);
+    -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .7));
+    filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .7));
+    color: red;
+  }
 
-#topSellerText:hover{
-    background: rgb(61, 60, 60);
-    /* change pointer */
-    cursor: pointer;
-    color: orange;
-}
+  .onSale a {
+    transform: scale(150%);
+    transition: all 150ms ease-in;
+    color: white;
+    text-decoration: none
+
+  }
+
+  .onSale a:hover {
+    transform: scale(200%);
+    -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .7));
+    filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .7));
+    color: white;
+  }
+
+  .featured a {
+    transform: scale(150%);
+    transition: all 150ms ease-in;
+    color: white;
+    text-decoration: none
+  }
+
+  .featured a:hover {
+    transform: scale(200%);
+    -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .7));
+    filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .7));
+    color: white;
+  }
+
+  .categories {
+    background-color: rgba(255, 255, 255, 0.8);
+  }

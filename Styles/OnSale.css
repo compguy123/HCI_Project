@@ -10,10 +10,11 @@ html, body {
     margin: 0;
     width: 100%;
     height: 100%;
-    background: #2f3539;
-    background: -moz-radial-gradient(circle, rgba(47, 53, 57, 1) 0%, rgba(30, 39, 46, 1) 100%);
+    /* background: #2f3539; */
+    /* background: -moz-radial-gradient(circle, rgba(47, 53, 57, 1) 0%, rgba(30, 39, 46, 1) 100%);
     background: -webkit-radial-gradient(circle, rgba(47, 53, 57, 1) 0%, rgba(30, 39, 46, 1) 100%);
-    background: radial-gradient(circle, rgba(47, 53, 57, 1) 0%, rgba(30, 39, 46, 1) 100%);
+    background: radial-gradient(circle, rgba(47, 53, 57, 1) 0%, rgba(30, 39, 46, 1) 100%); */
+    background-color: #A13333;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2f3539",endColorstr="#1e272e",GradientType=1);
 }
 html *, body * {
@@ -145,6 +146,11 @@ html > .carousel, body > .carousel {
     font-size: 18px;
   
   }
+
+.headerText{
+    
+
+}
   
   .breadCrumbLinks:hover{
     text-decoration: none;
