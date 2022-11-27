@@ -78,9 +78,10 @@ document.addEventListener("DOMContentLoaded", async (x) => {
 });
 
 
-window.onload = function () {
+window.onload =  function () {
+    alert(1);
     var breadCrumbEl = document.querySelector(".history");
-    setBreadCrumb("Pages/TopSellers.html", "../../", breadCrumbEl);
-}
+    setBreadCrumb("Pages/GenrePage.html","../../",breadCrumbEl);
+  }
 
 
