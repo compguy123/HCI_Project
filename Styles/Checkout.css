@@ -1,0 +1,56 @@
+.checkout-container {
+ background-color: aliceblue;
+ width: 100vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+
+}
+
+.orderSum{
+    width: 100%;
+   display: flex;
+   justify-content: center;
+   margin-bottom: 20px;
+   flex:1;
+   height: 40%;
+   align-items: center;
+
+}
+
+.cardInfo{
+    background-color: #f5f5f5;
+    width: 100%;
+   display: flex;
+   justify-content: center;
+   margin-bottom: 20px;
+    flex:2;
+    padding: 20px;
+    background:url('https://img.freepik.com/premium-vector/money-cards-transfers-financial-transactions-credit-card-background_74231-221.jpg?w=2000');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color:white;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.form-group{
+    width: 30vw;
+    margin-bottom: 20px;
+
+
+}
+.label{
+    width: 30vw;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+.form-btn{
+    display: flex;
+    justify-content: center;
+}

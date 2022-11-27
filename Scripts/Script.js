@@ -54,6 +54,11 @@ function updateCart() {
   cartCount.style.borderRadius = "20%";
 }
 
+function handleCheckout() {
+  window.location.href = "Checkout.html";
+}
+
+
 function handleCartClick() {
   //toggle the cart
   this.state.isCartClicked = !this.state.isCartClicked;
@@ -75,7 +80,7 @@ function handleCartClick() {
   });
   cart.innerHTML += '<div class="cartTotal">Total$: ' + state.total + "</div>";
   // a checkout button which is centered on the right
-  cart.innerHTML += '<button class="checkoutButton">Checkout</button>';
+  cart.innerHTML += '<button class="checkoutButton" onClick="handleCheckout()">Checkout</button>';
   // a close button which is on the top right
   cart.innerHTML +=
     '<button class="closeButton" onClick="hideCart()">X</button>';
