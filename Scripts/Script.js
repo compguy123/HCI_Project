@@ -78,7 +78,7 @@ function handleCartClick() {
       item.price +
       ` <span class=\"cartItemRemove\" onClick=removeItem(${index})> X </span></div>`;
   });
-  cart.innerHTML += '<div class="cartTotal">Total$: ' + state.total + "</div>";
+  cart.innerHTML += '<div class="cartTotal">Total: $' + state.total + "</div>";
   // a checkout button which is centered on the right
   cart.innerHTML += '<button class="checkoutButton" onClick="handleCheckout()">Checkout</button>';
   // a close button which is on the top right
