@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <!-- <script type="text/javascript" src="../Scripts/Script.js"></script> -->
+
+    <link rel="stylesheet" type="text/css" href="../Styles/Checkout.css" />
+    <link rel="stylesheet" type="text/css" href="https://pro.fontawesome.com/releases/v5.9.0/css/all.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+</head>
+
+<body>
+    <div class="checkout-container">
+     <div class="orderSum">
+            <h1>Your total is: $<span class="odrTotal">0.00</span> </h1>
+     </div>
+     <div class="cardInfo">
+        <form>
+            <div class="form-group">
+                <label class="label" for="cardNumber">Card Number</label>
+                <input type="text" class="form-control" id="cardNumber" placeholder="Card Number">
+            </div>
+            <div class="form-group">
+                <label class="label"  for="cardName">Name on Card</label>
+                <input type="text" class="form-control" id="cardName" placeholder="Name on Card">
+            </div>
+            <div class="form-group">
+                <label class="label"  for="cardExp">Expiration Date (MM/YY)</label>
+                <input type="text" class="form-control" id="cardExp" placeholder="Expiration Date (MM/YY)">
+            </div>
+            <div class="form-group">
+                <label class="label"  for="cardCVC">CVC</label>
+                <input type="text" class="form-control" id="cardCVC" placeholder="CVC">
+            </div>
+            <div class="form-btn">
+                <button  type="submit" class="btn btn-primary">Submit</button>
+            </div>
+     </div>
+
+    </div>
+</body>
+
+<script type="text/javascript" src="../Scripts/Checkout.js">
+
+</script>
+
+</html>
