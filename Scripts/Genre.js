@@ -79,7 +79,6 @@ document.addEventListener("DOMContentLoaded", async (x) => {
 
 
 window.onload =  function () {
-    alert(1);
     var breadCrumbEl = document.querySelector(".history");
     setBreadCrumb("Pages/GenrePage.html","../../",breadCrumbEl);
   }
