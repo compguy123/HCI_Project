@@ -16,6 +16,7 @@ html, body {
     background: radial-gradient(circle, rgba(47, 53, 57, 1) 0%, rgba(30, 39, 46, 1) 100%); */
     background-color: #A13333;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2f3539",endColorstr="#1e272e",GradientType=1);
+
 }
 html *, body * {
     font-family: 'Source Sans Pro', sans-serif;
