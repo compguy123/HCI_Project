@@ -34,6 +34,7 @@ async function displayFilteredTopSellerGames(filterByCost) {
     let genre = getGenre();
     games = games.filter(x => x.genre == genre)
     gamesElement.innerHTML = "";
+    let hasGames = false;
     for (let i = 0; i < games.length; i++) {
         const game = games[i];
         if (game.price !== filterByCost) continue;
@@ -55,6 +56,11 @@ async function displayFilteredTopSellerGames(filterByCost) {
         </div>
       </div>`;
         gamesElement.insertAdjacentHTML("afterbegin", cardHTML);
+        hasGames=true;
+    }
+    if(hasGames===false){
+        gamesElement.innerHTML=`<span style="font-size:1.5rem; color:white; margin-top:10rem"> No Games In Price Range</span>
+        `
     }
 }
 
