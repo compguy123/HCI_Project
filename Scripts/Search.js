@@ -152,7 +152,7 @@ async function displayFilteredTopSellerGames(filterByCost) {
     c.style.display="block";
     games =await getGames();
     games = games.reverse();
-    games= games.slice(0,5);
+    games= games.slice(0,10);
     const htmlCards = games.map(x => generateCard(x));
     s.innerHTML= htmlCards.join("\n");
         return;
