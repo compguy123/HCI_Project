@@ -115,7 +115,7 @@ var setBreadCrumb = function (pagelink,path,breadCrumbEl) {
   console.log(pagelink);
   console.log(breadCrumbEl);
 
-  breadCrumbEl.innerHTML =`<a href="../Index.html" class="breadCrumbLinks">Home</a>`;
+  breadCrumbEl.innerHTML =`<a href="../Index.html" class="breadCrumbLinks">Home/</a>`;
 
 
 }
