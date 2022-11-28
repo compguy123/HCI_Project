@@ -49,6 +49,8 @@ align-items: center;
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
+    font: 1.3em sans-serif;
+    color: rgb(255, 255, 255);
 }
 .form-btn{
     display: flex;
