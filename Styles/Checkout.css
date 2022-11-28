@@ -46,11 +46,14 @@ align-items: center;
 }
 .label{
     width: 30vw;
-    margin-bottom: 10px;
+    margin-bottom: 1px;
     display: flex;
     justify-content: center;
     font: 1.3em sans-serif;
     color: rgb(255, 255, 255);
+    background-color: rgb(76, 76, 129);
+    padding: 3px;
+    border-radius: 5px;
 }
 .form-btn{
     display: flex;
