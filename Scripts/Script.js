@@ -5,6 +5,8 @@ var state = {
   
 };
 
+
+
 function removeItem(index) {
   //remove the item from the state
   state.total -= state.items[index].price;
@@ -80,7 +82,9 @@ function handleCartClick() {
   });
   cart.innerHTML += '<div class="cartTotal">Total: $' + state.total + "</div>";
   // a checkout button which is centered on the right
+  if(state.items.length > 0){
   cart.innerHTML += '<button class="checkoutButton" onClick="handleCheckout()">Checkout</button>';
+  }
   // a close button which is on the top right
   cart.innerHTML +=
     '<button class="closeButton" onClick="hideCart()">X</button>';
