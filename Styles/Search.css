@@ -71,6 +71,7 @@ html > .carousel, body > .carousel {
     position: relative;
     transition: transform 1s ease-in-out;
     background: var(--crsl-bg);
+    
 }
 .carousel__body .carousel__slider__item {
     position: relative;
@@ -79,6 +80,8 @@ html > .carousel, body > .carousel {
     box-sizing: border-box;
     margin-left: 20px;
     margin-right: 20px;
+
+    
 }
 .carousel__body .carousel__slider__item .item__3d-frame {
     position: relative;

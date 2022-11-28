@@ -14,8 +14,8 @@ html, body {
     /* background: -moz-radial-gradient(circle, rgba(47, 53, 57, 1) 0%, rgba(30, 39, 46, 1) 100%);
     background: -webkit-radial-gradient(circle, rgba(47, 53, 57, 1) 0%, rgba(30, 39, 46, 1) 100%);
     background: radial-gradient(circle, rgba(47, 53, 57, 1) 0%, rgba(30, 39, 46, 1) 100%); */
-    background-color: #A13333;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2f3539",endColorstr="#1e272e",GradientType=1);
+   background: url("Assets\gameboy-svgrepo-com.svg");
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2f3539",endColorstr="#1e272e",GradientType=1);
 
 }
 html *, body * {
@@ -148,10 +148,7 @@ html > .carousel, body > .carousel {
   
   }
 
-.headerText{
-    
 
-}
   
   .breadCrumbLinks:hover{
     text-decoration: none;
@@ -182,6 +179,7 @@ html > .carousel, body > .carousel {
     font-size:3rem;
     width: 30%;
     margin: 1rem;
+    rotate: 90deg;
 }
 .price::before {
     content: '';
@@ -190,6 +188,6 @@ html > .carousel, body > .carousel {
     position: absolute;
     border-bottom: 4px solid red;
     transform: skewY(-8deg);
-    box-shadow: 0 0 2px black;
-    bottom: 10%;
+    box-shadow: 0 0 1px black;
+    bottom: 17%;
 }
