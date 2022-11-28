@@ -85,6 +85,9 @@ function handleCartClick() {
   if(state.items.length > 0){
   cart.innerHTML += '<button class="checkoutButton" onClick="handleCheckout()">Checkout</button>';
   }
+  else{
+    
+  }
   // a close button which is on the top right
   cart.innerHTML +=
     '<button class="closeButton" onClick="hideCart()">X</button>';
