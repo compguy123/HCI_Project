@@ -1,7 +1,7 @@
 let lastClickedButton = 0;
 
 async function getGames() {
-  const jsonPath = "https://raw.githubusercontent.com/compguy123/HCI_Project/larenwork/Assets/data.json";
+  const jsonPath = "https://raw.githubusercontent.com/compguy123/HCI_Project/thepace/Assets/data.json";
   const response = await fetch(jsonPath);
   const games = await response.json();
   return games;

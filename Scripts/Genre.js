@@ -1,7 +1,7 @@
 let lastClickedButton = 0;
 
 async function getGames() {
-    const jsonPath = "https://raw.githubusercontent.com/compguy123/HCI_Project/larenwork/Assets/data.json";
+    const jsonPath = "https://raw.githubusercontent.com/compguy123/HCI_Project/thepace/Assets/data.json";
     const response = await fetch(jsonPath);
     const games = await response.json();
     return games;
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", async (x) => {
             const btn = x.target;
             btn.classList.replace("btn-primary", "btn-info");
 
-            btn.style= " border: 3px red solid; ";
+            btn.style= " border: 10px black solid; ";
 
             if (lastClickedButton){
                 lastClickedButton.classList.replace("btn-info", "btn-primary");

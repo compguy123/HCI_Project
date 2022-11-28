@@ -93,7 +93,7 @@ function getQuery() {
 let lastClickedButton = 0;
 
 async function getGames() {
-    const jsonPath = "https://raw.githubusercontent.com/compguy123/HCI_Project/larenwork/Assets/data.json";
+    const jsonPath = "https://raw.githubusercontent.com/compguy123/HCI_Project/thepace/Assets/data.json";
     const response = await fetch(jsonPath);
     const games = await response.json();
     return games;
@@ -120,7 +120,7 @@ async function displayFilteredTopSellerGames(filterByCost) {
     if(!query)
     return;
     if (games.length ===0) {
-        gamesElement.innerHTML = `<span> OOPS! Nothing found. Here are other games you might be interesed in:</span>
+        gamesElement.innerHTML = `<span style="font-size:1.5rem; color:white"> OOPS! Nothing found. Here are other games you might be interesed in:</span>
        
     `
     function generateCard(game){
