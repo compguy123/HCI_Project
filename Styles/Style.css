@@ -291,11 +291,10 @@
 
 .card {
   margin-top: 20px;
-  rotate: -90deg;
+
 }
 
 .card-body {
-rotate: 90deg;
   max-height: 20rem;
 }
 

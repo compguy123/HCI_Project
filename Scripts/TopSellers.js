@@ -55,8 +55,14 @@ document.addEventListener("DOMContentLoaded", async (x) => {
       const cost = +x.target.textContent.substring(1);
       const btn = x.target;
       btn.classList.replace("btn-primary", "btn-info");
-      if (lastClickedButton)
+     
+      btn.style= " border: 3px red solid; ";
+      
+      if (lastClickedButton ){
         lastClickedButton.classList.replace("btn-info", "btn-primary");
+        lastClickedButton.style="border:none;";
+      }
+     
       lastClickedButton = btn;
       //remove dollor sign
       displayFilteredTopSellerGames(cost);
