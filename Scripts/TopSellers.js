@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", async (x) => {
       const btn = x.target;
       btn.classList.replace("btn-primary", "btn-info");
      
-      btn.style= " border: 3px red solid; ";
+      btn.style= " border: 10px black solid; ";
       
       if (lastClickedButton ){
         lastClickedButton.classList.replace("btn-info", "btn-primary");
