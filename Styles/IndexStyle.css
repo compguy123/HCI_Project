@@ -28,15 +28,15 @@
   }
 
   .topSeller {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgb(21, 20, 20);
   }
 
   .onSale {
-    background-color: rgba(255, 0, 0, 0.8);
+    background-color: rgba(168,5,5,255);
   }
 
   .featured {
-    background-color: rgba(255, 0, 0, 0.8);
+    background-color: rgba(168,5,5,255);
   }
 
   .topSeller a {
@@ -102,5 +102,5 @@
   }
 
   .categories {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgb(21, 20, 20);
   }
